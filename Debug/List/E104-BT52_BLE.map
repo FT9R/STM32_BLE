@@ -1,0 +1,400 @@
+###############################################################################
+#
+# IAR ELF Linker V9.20.1.318/W64 for ARM                  14/Feb/2023  16:12:44
+# Copyright 2007-2021 IAR Systems AB.
+#
+#    Output file  =
+#        E:\IAR projects\STM32F10x\E104-BT52_BLE\Debug\Exe\E104-BT52_BLE.out
+#    Map file     =
+#        E:\IAR projects\STM32F10x\E104-BT52_BLE\Debug\List\E104-BT52_BLE.map
+#    Command line =
+#        -f "E:\IAR
+#        projects\STM32F10x\E104-BT52_BLE\Debug\Exe\E104-BT52_BLE.out.rsp"
+#        ("E:\IAR
+#        projects\STM32F10x\E104-BT52_BLE\Debug\Obj\Libraries\Delay\Delay.o"
+#        "E:\IAR projects\STM32F10x\E104-BT52_BLE\Debug\Obj\Source\main.o"
+#        "E:\IAR
+#        projects\STM32F10x\E104-BT52_BLE\Debug\Obj\Config\startup_stm32f10x_ld.o"
+#        "E:\IAR
+#        projects\STM32F10x\E104-BT52_BLE\Debug\Obj\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.o"
+#        "E:\IAR
+#        projects\STM32F10x\E104-BT52_BLE\Debug\Obj\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.o"
+#        "E:\IAR projects\STM32F10x\E104-BT52_BLE\Debug\Obj\Config\Sys_Init.o"
+#        "E:\IAR
+#        projects\STM32F10x\E104-BT52_BLE\Debug\Obj\Config\system_stm32f10x.o"
+#        "E:\IAR
+#        projects\STM32F10x\E104-BT52_BLE\Debug\Obj\Libraries\USART\USART.o"
+#        --no_out_extension -o "E:\IAR
+#        projects\STM32F10x\E104-BT52_BLE\Debug\Exe\E104-BT52_BLE.out"
+#        --redirect _Printf=_PrintfFullNoMb --redirect _Scanf=_ScanfFullNoMb
+#        --map "E:\IAR
+#        projects\STM32F10x\E104-BT52_BLE\Debug\List\E104-BT52_BLE.map"
+#        --config "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        9.0\arm\config\linker\ST\stm32f103x6.icf" --semihosting --entry
+#        __iar_program_start --vfe --text_out locale)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__CPP_Runtime   = 1
+__Heap_Handler  = NoFree
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The no free heap was selected because no calls to memory
+deallocation functions were found in the application.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at address 0x800'0000 { ro section .intvec };
+"P1":  place in [from 0x800'0000 to 0x800'7fff] { ro };
+define block CSTACK with size = 2K, alignment = 8 { };
+define block HEAP with size = 2K, alignment = 8 { };
+"P2":  place in [from 0x2000'0000 to 0x2000'27ff] {
+          rw, block CSTACK, block HEAP };
+initialize by copy { rw };
+
+  Section            Kind         Address    Size  Object
+  -------            ----         -------    ----  ------
+"A0":                                        0xec
+  .intvec            ro code   0x800'0000    0xec  startup_stm32f10x_ld.o [1]
+                             - 0x800'00ec    0xec
+
+"P1":                                      0x1620
+  .text              ro code   0x800'00ec   0x5bc  USART.o [4]
+  .text              ro code   0x800'06a8   0x1d0  stm32f10x_usart.o [3]
+  .text              ro code   0x800'0878    0x4c  no_free_heap0.o [6]
+  .text              ro code   0x800'08c4    0x66  ABImemset.o [8]
+  .text              ro code   0x800'092a    0x2a  copy_init3.o [8]
+  .text              ro code   0x800'0954    0x1c  U32ToDbl.o [7]
+  .text              ro code   0x800'0970   0x246  DblDiv.o [7]
+  .text              ro code   0x800'0bb8   0x1aa  DblMul.o [7]
+  .text              ro code   0x800'0d64    0x36  DblToS32.o [7]
+  .text              ro code   0x800'0d9c    0x24  ABIassert.o [9]
+  .text              ro code   0x800'0dc0    0xa6  ABImemcpy.o [8]
+  .text              ro code   0x800'0e68   0x100  stm32f10x_rcc.o [3]
+  .text              ro code   0x800'0f68    0x2c  xgetmemchunk.o [6]
+  .text              ro code   0x800'0f94     0x6  abort.o [6]
+  .text              ro code   0x800'0f9c    0x14  exit.o [9]
+  .text              ro code   0x800'0fb0   0x1e0  main.o [5]
+  .text              ro code   0x800'1190    0x98  Sys_Init.o [1]
+  .text              ro code   0x800'1228    0x9c  Delay.o [2]
+  .text              ro code   0x800'12c4    0x12  strcmp.o [8]
+  .text              ro code   0x800'12d6    0x28  strncmp.o [6]
+  .text              ro code   0x800'1300    0xee  system_stm32f10x.o [1]
+  .rodata            const     0x800'13f0    0x40  Delay.o [2]
+  .rodata            const     0x800'1430    0x40  USART.o [4]
+  .text              ro code   0x800'1470    0x38  zero_init3.o [8]
+  .rodata            const     0x800'14a8    0x34  Delay.o [2]
+  .text              ro code   0x800'14dc    0x28  data_init.o [8]
+  Initializer bytes  const     0x800'1504    0x28  <for P2-1>
+  .rodata            const     0x800'152c    0x24  main.o [5]
+  .iar.init_table    const     0x800'1550    0x24  - Linker created -
+  .text              ro code   0x800'1574    0x1e  cmain.o [8]
+  .text              ro code   0x800'1592     0x4  low_level_init.o [6]
+  .text              ro code   0x800'1596     0x4  exit.o [6]
+  .text              ro code   0x800'159c     0xa  cexit.o [8]
+  .text              ro code   0x800'15a8    0x1c  cstartup_M.o [8]
+  .rodata            const     0x800'15c4    0x14  main.o [5]
+  .rodata            const     0x800'15d8    0x10  main.o [5]
+  .text              ro code   0x800'15e8    0x10  startup_stm32f10x_ld.o [1]
+  .rodata            const     0x800'15f8     0xc  main.o [5]
+  .rodata            const     0x800'1604     0xc  main.o [5]
+  .rodata            const     0x800'1610     0xc  main.o [5]
+  .rodata            const     0x800'161c     0xc  main.o [5]
+  .rodata            const     0x800'1628     0xc  main.o [5]
+  .rodata            const     0x800'1634     0xc  main.o [5]
+  .rodata            const     0x800'1640     0x8  main.o [5]
+  .rodata            const     0x800'1648     0x8  main.o [5]
+  .rodata            const     0x800'1650     0x8  USART.o [4]
+  .text              ro code   0x800'1658     0x4  startup_stm32f10x_ld.o [1]
+  .text              ro code   0x800'165c     0x4  startup_stm32f10x_ld.o [1]
+  .text              ro code   0x800'1660     0x4  startup_stm32f10x_ld.o [1]
+  .text              ro code   0x800'1664     0x4  startup_stm32f10x_ld.o [1]
+  .text              ro code   0x800'1668     0x4  startup_stm32f10x_ld.o [1]
+  .text              ro code   0x800'166c     0x4  startup_stm32f10x_ld.o [1]
+  .text              ro code   0x800'1670     0x4  startup_stm32f10x_ld.o [1]
+  .text              ro code   0x800'1674     0x4  startup_stm32f10x_ld.o [1]
+  .text              ro code   0x800'1678     0x4  startup_stm32f10x_ld.o [1]
+  .text              ro code   0x800'167c     0x4  startup_stm32f10x_ld.o [1]
+  .text              ro code   0x800'1680     0x4  startup_stm32f10x_ld.o [1]
+  .text              ro code   0x800'1684     0x4  startup_stm32f10x_ld.o [1]
+  .text              ro code   0x800'1688     0x4  startup_stm32f10x_ld.o [1]
+  .text              ro code   0x800'168c     0x4  startup_stm32f10x_ld.o [1]
+  .text              ro code   0x800'1690     0x4  startup_stm32f10x_ld.o [1]
+  .text              ro code   0x800'1694     0x4  startup_stm32f10x_ld.o [1]
+  .text              ro code   0x800'1698     0x4  startup_stm32f10x_ld.o [1]
+  .text              ro code   0x800'169c     0x4  startup_stm32f10x_ld.o [1]
+  .text              ro code   0x800'16a0     0x4  startup_stm32f10x_ld.o [1]
+  .text              ro code   0x800'16a4     0x4  startup_stm32f10x_ld.o [1]
+  .text              ro code   0x800'16a8     0x4  startup_stm32f10x_ld.o [1]
+  .text              ro code   0x800'16ac     0x4  startup_stm32f10x_ld.o [1]
+  .text              ro code   0x800'16b0     0x4  startup_stm32f10x_ld.o [1]
+  .text              ro code   0x800'16b4     0x4  startup_stm32f10x_ld.o [1]
+  .text              ro code   0x800'16b8     0x4  startup_stm32f10x_ld.o [1]
+  .text              ro code   0x800'16bc     0x4  startup_stm32f10x_ld.o [1]
+  .text              ro code   0x800'16c0     0x4  startup_stm32f10x_ld.o [1]
+  .text              ro code   0x800'16c4     0x4  startup_stm32f10x_ld.o [1]
+  .text              ro code   0x800'16c8     0x4  startup_stm32f10x_ld.o [1]
+  .text              ro code   0x800'16cc     0x4  startup_stm32f10x_ld.o [1]
+  .text              ro code   0x800'16d0     0x4  startup_stm32f10x_ld.o [1]
+  .text              ro code   0x800'16d4     0x4  startup_stm32f10x_ld.o [1]
+  .text              ro code   0x800'16d8     0x4  startup_stm32f10x_ld.o [1]
+  .text              ro code   0x800'16dc     0x4  startup_stm32f10x_ld.o [1]
+  .text              ro code   0x800'16e0     0x4  startup_stm32f10x_ld.o [1]
+  .text              ro code   0x800'16e4     0x4  startup_stm32f10x_ld.o [1]
+  .text              ro code   0x800'16e8     0x4  startup_stm32f10x_ld.o [1]
+  .text              ro code   0x800'16ec     0x4  startup_stm32f10x_ld.o [1]
+  .text              ro code   0x800'16f0     0x4  startup_stm32f10x_ld.o [1]
+  .text              ro code   0x800'16f4     0x4  startup_stm32f10x_ld.o [1]
+  .text              ro code   0x800'16f8     0x4  startup_stm32f10x_ld.o [1]
+  .text              ro code   0x800'16fc     0x4  startup_stm32f10x_ld.o [1]
+  .text              ro code   0x800'1700     0x4  startup_stm32f10x_ld.o [1]
+  .text              ro code   0x800'1704     0x4  startup_stm32f10x_ld.o [1]
+  .text              ro code   0x800'1708     0x4  startup_stm32f10x_ld.o [1]
+  .rodata            const     0x800'170c     0x0  zero_init3.o [8]
+  .rodata            const     0x800'170c     0x0  copy_init3.o [8]
+                             - 0x800'170c  0x1620
+
+"P2", part 1 of 3:                           0x28
+  P2-1                        0x2000'0000    0x28  <Init block>
+    .data            inited   0x2000'0000    0x10  stm32f10x_rcc.o [3]
+    .data            inited   0x2000'0010     0x4  stm32f10x_rcc.o [3]
+    .data            inited   0x2000'0014     0x4  system_stm32f10x.o [1]
+    .data            inited   0x2000'0018    0x10  system_stm32f10x.o [1]
+                            - 0x2000'0028    0x28
+
+"P2", part 2 of 3:                           0xdc
+  .bss               zero     0x2000'0028    0x64  main.o [5]
+  .bss               zero     0x2000'008c    0x1c  USART.o [4]
+  .bss               zero     0x2000'00a8    0x1c  USART.o [4]
+  .bss               zero     0x2000'00c4    0x14  Sys_Init.o [1]
+  .bss               zero     0x2000'00d8    0x10  USART.o [4]
+  .bss               zero     0x2000'00e8    0x10  USART.o [4]
+  .bss               zero     0x2000'00f8     0x4  no_free_heap0.o [6]
+  .bss               zero     0x2000'00fc     0x4  xgetmemchunk.o [6]
+  .bss               zero     0x2000'0100     0x2  USART.o [4]
+                            - 0x2000'0102    0xda
+
+"P2", part 3 of 3:                         0x1000
+  CSTACK                      0x2000'0108   0x800  <Block>
+    CSTACK           uninit   0x2000'0108   0x800  <Block tail>
+  HEAP                        0x2000'0908   0x800  <Block>
+    HEAP             uninit   0x2000'0908   0x800  <Block tail>
+                            - 0x2000'1108  0x1000
+
+Unused ranges:
+
+         From           To    Size
+         ----           --    ----
+   0x800'170c   0x800'7fff  0x68f4
+  0x2000'0104  0x2000'0107     0x4
+  0x2000'1108  0x2000'27ff  0x16f8
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address      Size
+          -------      ----
+Zero (__iar_zero_init3)
+    1 destination range, total size 0xda:
+          0x2000'0028  0xda
+
+Copy (__iar_copy_init3)
+    1 source range, total size 0x28:
+           0x800'1504  0x28
+    1 destination range, total size 0x28:
+          0x2000'0000  0x28
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                  ro code  ro data  rw data
+    ------                  -------  -------  -------
+command line/config:
+    -------------------------------------------------
+    Total:
+
+E:\IAR projects\STM32F10x\E104-BT52_BLE\Debug\Obj\Config: [1]
+    Sys_Init.o                  152                20
+    startup_stm32f10x_ld.o      432
+    system_stm32f10x.o          238       20       20
+    -------------------------------------------------
+    Total:                      822       20       40
+
+E:\IAR projects\STM32F10x\E104-BT52_BLE\Debug\Obj\Libraries\Delay: [2]
+    Delay.o                     156      116
+    -------------------------------------------------
+    Total:                      156      116
+
+E:\IAR projects\STM32F10x\E104-BT52_BLE\Debug\Obj\Libraries\STM32F10x_StdPeriph_Driver\src: [3]
+    stm32f10x_rcc.o             256       20       20
+    stm32f10x_usart.o           464
+    -------------------------------------------------
+    Total:                      720       20       20
+
+E:\IAR projects\STM32F10x\E104-BT52_BLE\Debug\Obj\Libraries\USART: [4]
+    USART.o                   1'468       72       90
+    -------------------------------------------------
+    Total:                    1'468       72       90
+
+E:\IAR projects\STM32F10x\E104-BT52_BLE\Debug\Obj\Source: [5]
+    main.o                      480      160      100
+    -------------------------------------------------
+    Total:                      480      160      100
+
+dl7M_tln.a: [6]
+    abort.o                       6
+    exit.o                        4
+    low_level_init.o              4
+    no_free_heap0.o              76                 4
+    strncmp.o                    40
+    xgetmemchunk.o               44                 4
+    -------------------------------------------------
+    Total:                      174                 8
+
+m7M_tl.a: [7]
+    DblDiv.o                    582
+    DblMul.o                    426
+    DblToS32.o                   54
+    U32ToDbl.o                   28
+    -------------------------------------------------
+    Total:                    1'090
+
+rt7M_tl.a: [8]
+    ABImemcpy.o                 166
+    ABImemset.o                 102
+    cexit.o                      10
+    cmain.o                      30
+    copy_init3.o                 42
+    cstartup_M.o                 28
+    data_init.o                  40
+    strcmp.o                     18
+    zero_init3.o                 56
+    -------------------------------------------------
+    Total:                      492
+
+shb_l.a: [9]
+    ABIassert.o                  36
+    exit.o                       20
+    -------------------------------------------------
+    Total:                       56
+
+    Gaps                         16        2
+    Linker created                        36    4'096
+-----------------------------------------------------
+    Grand Total:              5'474      426    4'354
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                       Address   Size  Type      Object
+-----                       -------   ----  ----      ------
+.iar.init_table$$Base    0x800'1550          --   Gb  - Linker created -
+.iar.init_table$$Limit   0x800'1574          --   Gb  - Linker created -
+?main                    0x800'1575         Code  Gb  cmain.o [8]
+ADCPrescTable           0x2000'0010    0x4  Data  Lc  stm32f10x_rcc.o [3]
+AHBPrescTable           0x2000'0018   0x10  Data  Gb  system_stm32f10x.o [1]
+APBAHBPrescTable        0x2000'0000   0x10  Data  Lc  stm32f10x_rcc.o [3]
+BT52_masterConfig        0x800'0ff7  0x15c  Code  Gb  main.o [5]
+CSTACK$$Base            0x2000'0108          --   Gb  - Linker created -
+CSTACK$$Limit           0x2000'0908          --   Gb  - Linker created -
+HEAP$$Base              0x2000'0908          --   Gb  - Linker created -
+HEAP$$Limit             0x2000'1108          --   Gb  - Linker created -
+RCC_APB1PeriphResetCmd   0x800'0f31   0x1c  Code  Gb  stm32f10x_rcc.o [3]
+RCC_APB2PeriphResetCmd   0x800'0f15   0x1c  Code  Gb  stm32f10x_rcc.o [3]
+RCC_GetClocksFreq        0x800'0e69   0xac  Code  Gb  stm32f10x_rcc.o [3]
+ReadTimeout             0x2000'0100    0x2  Data  Gb  USART.o [4]
+Region$$Table$$Base      0x800'1550          --   Gb  - Linker created -
+Region$$Table$$Limit     0x800'1574          --   Gb  - Linker created -
+SetSysClock              0x800'13ed    0x2  Code  Lc  system_stm32f10x.o [1]
+SlaveMAC                 0x800'1648    0x8  Data  Gb  main.o [5]
+Sys_Init                 0x800'1191   0x98  Code  Gb  Sys_Init.o [1]
+SystemCoreClock         0x2000'0014    0x4  Data  Gb  system_stm32f10x.o [1]
+SystemCoreClockUpdate    0x800'1345   0x7e  Code  Gb  system_stm32f10x.o [1]
+SystemInit               0x800'1301   0x44  Code  Gb  system_stm32f10x.o [1]
+TIM2_IRQHandler          0x800'05e7   0x58  Code  Gb  USART.o [4]
+UART1                   0x2000'008c   0x1c  Data  Gb  USART.o [4]
+UART2                   0x2000'00a8   0x1c  Data  Gb  USART.o [4]
+USART1_IRQHandler        0x800'056d   0x7a  Code  Gb  USART.o [4]
+USART1_InitStruct       0x2000'00d8   0x10  Data  Gb  USART.o [4]
+USART2_InitStruct       0x2000'00e8   0x10  Data  Gb  USART.o [4]
+USART_Cmd                0x800'0809   0x1c  Code  Gb  stm32f10x_usart.o [3]
+USART_DeInit             0x800'06a9   0x8e  Code  Gb  stm32f10x_usart.o [3]
+USART_ITConfig           0x800'0825   0x54  Code  Gb  stm32f10x_usart.o [3]
+USART_Init               0x800'0737   0xbe  Code  Gb  stm32f10x_usart.o [3]
+USART_Receive            0x800'04e1   0x8c  Code  Gb  USART.o [4]
+USART_Send               0x800'045f   0x82  Code  Gb  USART.o [4]
+USARTx_Init              0x800'010b  0x354  Code  Gb  USART.o [4]
+__NVIC_EnableIRQ         0x800'00ed   0x1e  Code  Lc  USART.o [4]
+__aeabi_assert           0x800'0d9d   0x24  Code  Gb  ABIassert.o [9]
+__aeabi_d2iz             0x800'0d65         Code  Gb  DblToS32.o [7]
+__aeabi_ddiv             0x800'0971         Code  Gb  DblDiv.o [7]
+__aeabi_dmul             0x800'0bb9         Code  Gb  DblMul.o [7]
+__aeabi_memcpy           0x800'0dc1         Code  Gb  ABImemcpy.o [8]
+__aeabi_memcpy4          0x800'0de1         Code  Gb  ABImemcpy.o [8]
+__aeabi_memcpy8          0x800'0de1         Code  Gb  ABImemcpy.o [8]
+__aeabi_memset           0x800'08c5         Code  Gb  ABImemset.o [8]
+__aeabi_ui2d             0x800'0955         Code  Gb  U32ToDbl.o [7]
+__cmain                  0x800'1575         Code  Gb  cmain.o [8]
+__data_GetMemChunk       0x800'0f69   0x2c  Code  Gb  xgetmemchunk.o [6]
+__data_GetMemChunk::start
+                        0x2000'00fc    0x4  Data  Lc  xgetmemchunk.o [6]
+__exit                   0x800'0f9d   0x14  Code  Gb  exit.o [9]
+__iar_Memset             0x800'08c5         Code  Gb  ABImemset.o [8]
+__iar_Memset_word        0x800'08cd         Code  Gb  ABImemset.o [8]
+__iar_copy_init3         0x800'092b   0x2a  Code  Gb  copy_init3.o [8]
+__iar_data_init3         0x800'14dd   0x28  Code  Gb  data_init.o [8]
+__iar_program_start      0x800'15a9         Code  Gb  cstartup_M.o [8]
+__iar_zero_init3         0x800'1471   0x38  Code  Gb  zero_init3.o [8]
+__low_level_init         0x800'1593    0x4  Code  Gb  low_level_init.o [6]
+__no_free_malloc         0x800'0879   0x46  Code  Gb  no_free_heap0.o [6]
+__vector_table           0x800'0000         Data  Gb  startup_stm32f10x_ld.o [1]
+_call_main               0x800'1581         Code  Gb  cmain.o [8]
+_delay_ms                0x800'1229   0x82  Code  Gb  Delay.o [2]
+_exit                    0x800'159d         Code  Gb  cexit.o [8]
+abort                    0x800'0f95    0x6  Code  Gb  abort.o [6]
+bufferRX                0x2000'0028   0x64  Data  Gb  main.o [5]
+exit                     0x800'1597    0x4  Code  Gb  exit.o [6]
+main                     0x800'0fb1   0x46  Code  Gb  main.o [5]
+qs                      0x2000'00f8    0x4  Data  Lc  no_free_heap0.o [6]
+rcc_clocks              0x2000'00c4   0x14  Data  Gb  Sys_Init.o [1]
+strcmp                   0x800'12c5         Code  Gb  strcmp.o [8]
+strncmp                  0x800'12d7   0x28  Code  Gb  strncmp.o [6]
+
+
+[1] = E:\IAR projects\STM32F10x\E104-BT52_BLE\Debug\Obj\Config
+[2] = E:\IAR projects\STM32F10x\E104-BT52_BLE\Debug\Obj\Libraries\Delay
+[3] = E:\IAR projects\STM32F10x\E104-BT52_BLE\Debug\Obj\Libraries\STM32F10x_StdPeriph_Driver\src
+[4] = E:\IAR projects\STM32F10x\E104-BT52_BLE\Debug\Obj\Libraries\USART
+[5] = E:\IAR projects\STM32F10x\E104-BT52_BLE\Debug\Obj\Source
+[6] = dl7M_tln.a
+[7] = m7M_tl.a
+[8] = rt7M_tl.a
+[9] = shb_l.a
+
+  5'474 bytes of readonly  code memory
+    426 bytes of readonly  data memory
+  4'354 bytes of readwrite data memory
+
+Errors: none
+Warnings: none

@@ -1,0 +1,5 @@
+{
+    "ewp": "${workspaceFolder}\\E104-BT52_BLE.ewp",
+    "configuration": "Debug",
+    "toolchain": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 9.0"
+}
