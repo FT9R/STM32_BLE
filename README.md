@@ -7,7 +7,7 @@ personal computers, mobile phones and etc.
 `Toolchain - IAR EWARM v9.20.1`
 ## Quick start
 It is assumed that you have at least two the same BLE modules.
-### Slave configuration
+### <u>Slave configuration<\u>
 First module (Slave) should be configured as follows:
 * Connect one module to COM port via USB to TTL adapter (Vcc = 3.3V)
 * Configure the serial port according to BLE module default parameters
