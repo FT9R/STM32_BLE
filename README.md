@@ -17,7 +17,7 @@ First module (Slave) should be configured as follows:
 * Send "AT+MAC?" to get 6 byte slave address. 
 Paste it to **/Include/main.h 
 instead of predefined values in
-'''
+```
 const uint8_t SlaveMAC[6] = {0x32, 0x00, 0x00, 0xB1, 0x9A, 0x01};
-'''
+```
 
