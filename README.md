@@ -3,7 +3,7 @@ This is an example of usage [`E104-BT52`](https://www.ebyte.com/en/product-view-
 serial to BLE module, which can provide wireless data transmission between microcontroller units,
 personal computers, mobile phones and etc.
 ## Conditions
-``Target MCU - STM32F103C6T6 (BluePill)``
+`Target MCU - STM32F103C6T6 (BluePill)`;
 `Toolchain - IAR EWARM v9.20.1`
 ## Quick start
 It is assumed that you have at least two the same BLE modules.
