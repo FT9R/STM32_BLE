@@ -14,6 +14,7 @@ First module (Slave) should be configured as follows:
 * Send "AT" throught terminal. You should get "+OK" as a response from module.
 * Send "AT+ROLE=0" in order to choose slave role for this module.
 * Send "AT+LOGMSG=1" if you want to see the connection status
-* Send "AT+MAC?" to get 6 byte slave address. Paste it to **/Include/main.h
+* Send "AT+MAC?" to get 6 byte slave address. 
+Paste it to **/Include/main.h 
 instead of predefined values in 'const uint8_t SlaveMAC[6] = {0x32, 0x00, 0x00, 0xB1, 0x9A, 0x01};'
 
