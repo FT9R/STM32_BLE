@@ -20,4 +20,5 @@ instead of predefined values in
 ```
 const uint8_t SlaveMAC[6] = {0x32, 0x00, 0x00, 0xB1, 0x9A, 0x01};
 ```
-
+* Send "AT+TRANMD=1" to put module into transparent transmission mode and allow to receive data without any processing
+* Send "AT+RESET" to take effects of configuration
