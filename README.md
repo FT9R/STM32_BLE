@@ -21,7 +21,7 @@ First module (Slave) should be configured as follows:
 * Send "AT+MAC?" to get 6 byte slave address. 
 Paste it to **/Include/main.h 
 instead of predefined values in
-```
+```C
 const uint8_t SlaveMAC[6] = {0x32, 0x00, 0x00, 0xB1, 0x9A, 0x01};
 ```
 * Send "AT+TRANMD=1" to put module into transparent transmission mode and allow to receive data without any processing
